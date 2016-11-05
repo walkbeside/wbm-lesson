@@ -35,17 +35,46 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/tabs/tabs.html'
   })
 
+  .state('tab.watch.quiz', {
+    url: '/quiz',
+    views: {
+      'tab-watch@tab': {
+        templateUrl: 'templates/quiz.html',
+        controller: 'quizController'
+      }
+    }
+  })
+
+  .state('tab.listen.quiz', {
+    url: '/quiz',
+    views: {
+      'tab-listen@tab': {
+        templateUrl: 'templates/quiz.html',
+        controller: 'quizController'
+      }
+    }
+  })
+
+  .state('tab.read.quiz', {
+    url: '/quiz',
+    views: {
+      'tab-read@tab': {
+        templateUrl: 'templates/quiz.html',
+        controller: 'quizController'
+      }
+    }
+  })
   // Each tab has its own nav history stack:
 
   .state('tab.watch', {
     url: '/watch',
     views: {
       'tab-watch': {
-        templateUrl: 'templates/tab-watch.html',
-        controller: 'WatchCtrl'
+        templateUrl: 'templates/tabs/tab-watch.html',
+        controller: 'watchController'
       }
     }
   })
@@ -54,17 +83,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/listen',
       views: {
         'tab-listen': {
-          templateUrl: 'templates/tab-listen.html',
-          controller: 'ListenCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+          templateUrl: 'templates/tabs/tab-listen.html',
+          controller: 'listenController'
         }
       }
     })
@@ -73,8 +93,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/read',
     views: {
       'tab-read': {
-        templateUrl: 'templates/tab-read.html',
-        controller: 'ReadCtrl'
+        templateUrl: 'templates/tabs/tab-read.html',
+        controller: 'readController'
       }
     }
   });

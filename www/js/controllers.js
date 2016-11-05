@@ -1,8 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('WatchCtrl', function($scope) {})
+.controller('watchController', function($scope) {})
 
-.controller('ListenCtrl', function($scope, Chats) {
+.controller('listenController', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -17,13 +17,10 @@ angular.module('starter.controllers', [])
   };
 })
 
-// might not need this one
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
-
-.controller('ReadCtrl', function($scope) {
+.controller('readController', function($scope) {
   $scope.settings = {
     enableFriends: true
   };
-});
+})
+
+.controller('quizController', function($scope) {});
