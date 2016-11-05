@@ -8,12 +8,12 @@
             templateUrl: '../templates/tabs/tab-watch.html'
         });
 
-    function watchController($sce) {
+    function watchController($sce, lessonContentService) {
         var vm = this;
         loadVideoUrl();
 
         function loadVideoUrl() {
-            vm.videoUrl = $sce.trustAsResourceUrl('https://player.vimeo.com/video/75800126');
+            vm.videoUrl = $sce.trustAsResourceUrl(lessonContentService.getVideoUrl('lesson1'));
         }
     }
 })();
