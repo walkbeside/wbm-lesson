@@ -5,7 +5,7 @@
         .module('wbmLesson')
         .component('listenLesson', {
             controller: listenController,
-            templateUrl: '../templates/tab-listen.html'
+            templateUrl: '../templates/tabs/tab-listen.html'
         });
 
     function listenController() {
