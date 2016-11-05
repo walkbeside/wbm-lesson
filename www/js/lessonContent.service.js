@@ -3,11 +3,11 @@
 
     angular
         .module('wbmLesson')
-        .factory('lessonReaderService', lessonReaderService);
+        .factory('lessonContentService', lessonContentService);
 
-    function lessonReaderService($http) {
+    function lessonContentService($http) {
         return {
-            readLesson: function(lessonUrl) {
+            getTextContent: function(lessonUrl) {
                 var baseUrl = 'resources/lessons/';
                 return $http.get(baseUrl + lessonUrl);
             }

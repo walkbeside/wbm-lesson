@@ -8,13 +8,13 @@
             templateUrl: '../templates/tabs/tab-read.html'
         });
 
-    function readController(lessonReaderService) {
+    function readController(lessonContentService) {
         loadTextContent();
         var vm = this;
         vm.lessonText = "Loading...";
 
         function loadTextContent() {
-            lessonReaderService.readLesson('knowing-jesus/lesson-one.html')
+            lessonContentService.getTextContent('knowing-jesus/lesson-one.html')
                 .success(function(data) {
                     vm.lessonText = data;
                 });
