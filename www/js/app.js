@@ -31,6 +31,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+  .state('chat', {
+    url: '/chat',
+    views: {
+      'chat': {
+        templateUrl: 'templates/chat.html',
+        controller: 'chatController'
+      }
+    }
+  })
+
   // setup an abstract state for the tabs directive
     .state('tab', {
     url: '/tab',
