@@ -1,2 +1,4 @@
 .idea/*
 platforms/*
+res/*
+node_modules/*

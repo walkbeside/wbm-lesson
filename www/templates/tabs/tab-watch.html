@@ -1,0 +1,24 @@
+<ion-view view-title="Watch">
+  <ion-nav-buttons side="primary">
+    <a class="button" href="#/UserMessages">
+      <i class="icon ion-chatboxes"></i> Back to chat
+    </a>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+    <ion-list>
+      <div class="card">
+        <ion-item>
+          <div class="video-container">
+            <iframe ng-src="{{$ctrl.videoUrl}}" width="160" height="68" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </ion-item>
+      </div>
+    </ion-list>
+    <div>
+      <a class="button" ui-sref="tab.watch.quiz">
+        Next
+        <i class="ion-arrow-right-a"></i>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

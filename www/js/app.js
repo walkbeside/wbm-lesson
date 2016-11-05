@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('wbmLesson', ['ionic', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -31,55 +31,78 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
+  .state('UserMessages', {
+    url: '/UserMessages',
+    templateUrl: 'templates/UserMessages.html',
+    controller: 'UserMessagesCtrl'
   })
 
-  // Each tab has its own nav history stack:
+  // setup an abstract state for the tabs directive
+  .state('tab', {
+    url: '/tab',
+    abstract: true,
+    templateUrl: 'templates/tabs/tabs.html'
+  })
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.watch.quiz', {
+    url: '/quiz',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-watch@tab': {
+        templateUrl: 'templates/quiz.html',
+        controller: 'quizController'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
+  .state('tab.listen.quiz', {
+    url: '/quiz',
+    views: {
+      'tab-listen@tab': {
+        templateUrl: 'templates/quiz.html',
+        controller: 'quizController'
       }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    }
+  })
+
+  .state('tab.read.quiz', {
+    url: '/quiz',
+    views: {
+      'tab-read@tab': {
+        templateUrl: 'templates/quiz.html',
+        controller: 'quizController'
+      }
+    }
+  })
+  // Each tab has its own nav history stack:
+
+  .state('tab.watch', {
+    url: '/watch',
+    views: {
+      'tab-watch': {
+        template: '<watch-lesson></watch-lesson>'
+      }
+    }
+  })
+
+  .state('tab.listen', {
+      url: '/listen',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-listen': {
+          template: '<listen-lesson></listen-lesson>'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.read', {
+    url: '/read',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-read': {
+        template: '<read-lesson></read-lesson>'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/UserMessages');
 
 });

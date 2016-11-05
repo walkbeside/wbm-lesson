@@ -16,25 +16,33 @@
       }
     </script>-->
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-    -->
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/js/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script>
+<!--
+    <script src="//code.ionicframework.com/1.0.0-beta.14/js/ionic.bundle.min.js"></script>
+-->
+    <!--&lt;!&ndash; moment &ndash;&gt;-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <!--&lt;!&ndash; angular moment &ndash;&gt;-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.8.2/angular-moment.min.js"></script>
+
+    <script src="js/watch.component.js"></script>
+    <script src="js/listen.component.js"></script>
+    <script src="js/read.component.js"></script>
+    <script src="js/lessonContent.service.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="wbmLesson">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
