@@ -8,11 +8,16 @@
             templateUrl: '../templates/tab-read.html'
         });
 
-    function readController() {
+    function readController(lessonReaderService) {
         loadTextContent();
+        var vm = this;
+        vm.lessonText = "Loading...";
 
         function loadTextContent() {
-
+            lessonReaderService.readLesson('knowing-jesus/lesson-one.html')
+                .success(function(data) {
+                    vm.lessonText = data;
+                });
         }
     }
 })();
