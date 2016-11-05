@@ -31,18 +31,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  .state('chat', {
-    url: '/chat',
-    views: {
-      'chat': {
-        templateUrl: 'templates/chat.html',
-        controller: 'chatController'
-      }
-    }
+  .state('UserMessages', {
+    url: '/UserMessages',
+    templateUrl: 'templates/UserMessages.html',
+    controller: 'UserMessagesCtrl'
   })
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs/tabs.html'
@@ -110,6 +106,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/watch');
+  $urlRouterProvider.otherwise('/UserMessages');
 
 });
