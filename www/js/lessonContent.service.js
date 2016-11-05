@@ -6,9 +6,10 @@
         .factory('lessonContentService', lessonContentService);
 
     function lessonContentService($http) {
+        var baseUrl = 'resources/lessons/';
+
         return {
             getTextContent: function(lessonUrl) {
-                var baseUrl = 'resources/lessons/';
                 return $http.get(baseUrl + lessonUrl);
             },
 
@@ -20,6 +21,10 @@
                 } else {
                     return null;
                 }
+            },
+
+            getAudioUrl: function(lesson, lessonNumber) {
+                return baseUrl + lesson + "/" + lessonNumber;
             }
         };
     }
