@@ -234,7 +234,12 @@ angular.module('starter.controllers', [])
             return {
                 userId: '534b8e5aaa5e7afc1b23e69b',
                 date: new Date(),
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                text: 'Here\'s the links again.  You can watch, listen, or read the lesson.',
+                link: {
+                  watch: '#/tab/watch',
+                  listen: '#/tab/listen',
+                  read: '#/tab/read',
+                }
             };
         }
 
@@ -365,7 +370,12 @@ function getMockMessages() {
             "readDate": "2014-12-01T06:27:38.339Z"
         }, {
             "_id": "54781ca4ab43d1d4113abff1",
-            "text": "Create amazing apps - ionicframework.com",
+            "text": 'Check out this lesson on treasuring Jesus Christ.  You can watch, listen, or read it. ',
+            "link": {
+                              "watch": '#/tab/watch',
+                              "listen": '#/tab/listen',
+                              "read": '#/tab/read',
+                            },
             "userId": "534b8e5aaa5e7afc1b23e69b",
             "date": "2014-11-29T06:56:36.472Z",
             "read": true,
