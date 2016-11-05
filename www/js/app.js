@@ -79,8 +79,7 @@ angular.module('wbmLesson', ['ionic'])
     url: '/watch',
     views: {
       'tab-watch': {
-        templateUrl: 'templates/tabs/tab-watch.html',
-        controller: 'watchController'
+        template: '<watch-lesson></watch-lesson>'
       }
     }
   })
@@ -89,8 +88,7 @@ angular.module('wbmLesson', ['ionic'])
       url: '/listen',
       views: {
         'tab-listen': {
-          templateUrl: 'templates/tabs/tab-listen.html',
-          controller: 'listenController'
+          template: '<listen-lesson></listen-lesson>'
         }
       }
     })
@@ -99,8 +97,7 @@ angular.module('wbmLesson', ['ionic'])
     url: '/read',
     views: {
       'tab-read': {
-        templateUrl: 'templates/tabs/tab-read.html',
-        controller: 'readController'
+        template: '<read-lesson></read-lesson>'
       }
     }
   });
