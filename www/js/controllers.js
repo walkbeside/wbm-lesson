@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('wbmLesson.controllers', [])
 
 .controller('watchController', function($scope) {})
 
