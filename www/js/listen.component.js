@@ -9,7 +9,7 @@
         });
 
     function listenController() {
-        this.loadAudioClip();
+        loadAudioClip();
 
         function loadAudioClip() {
 

@@ -9,7 +9,7 @@
         });
 
     function readController() {
-        this.loadTextContent();
+        loadTextContent();
 
         function loadTextContent() {
 

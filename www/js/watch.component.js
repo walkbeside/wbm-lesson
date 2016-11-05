@@ -9,7 +9,7 @@
         });
 
     function watchController() {
-        this.loadVideo();
+        loadVideo();
 
         function loadVideo() {
 
