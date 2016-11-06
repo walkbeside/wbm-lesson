@@ -3,7 +3,8 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('wbmLesson', ['ionic', 'ngCordova', 'userMessages', 'lessonPlan'])
+angular.module('wbmLesson', ['ionic', 'ngCordova', 'userMessages', 'lessonPlan', 'courses',
+  'mentees'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -39,6 +40,18 @@ angular.module('wbmLesson', ['ionic', 'ngCordova', 'userMessages', 'lessonPlan']
     templateUrl: 'templates/LessonPlan.html',
     controller: 'lessonPlanController'
   })
+
+      .state('courses', {
+        url: '/courses',
+        templateUrl: 'templates/courses.html',
+        controller: 'coursesController'
+      })
+
+      .state('mentees', {
+        url: '/mentees',
+        templateUrl: 'templates/mentees.html',
+        controller: 'menteesController'
+      })
 
   // setup an abstract state for the tabs directive
   .state('tab', {

@@ -1,0 +1,15 @@
+<ion-view view-title="Mentees">
+    <ion-content>
+        <div class="list">
+            <div ng-repeat="mentee in mentees">
+                <a class="item item-icon-left">
+                    {{mentee.name}}
+                    <i class="icon ion-person"></i>
+                    <span class="item-note">
+                        {{mentee.last_contact}}
+                    </span>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

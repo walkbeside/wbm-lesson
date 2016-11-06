@@ -8,6 +8,21 @@
     function lessonContentService($http) {
         var baseUrl = 'resources/lessons/';
 
+        var mentees = [
+            {
+                name: 'Bill',
+                last_contact: '3 days ago'
+            },
+            {
+                name: 'Daniel',
+                last_contact: '2 weeks ago'
+            },
+            {
+                name: 'Miheret',
+                last_contact: '1 month ago'
+            }
+        ];
+
         var completed = [
             {
                 name: 'Stepping From Uncertainty to Confidence',
@@ -63,6 +78,10 @@
 
             getNextLessons: function() {
                 return next;
+            },
+
+            getMentees: function() {
+                return mentees;
             }
         };
     }
