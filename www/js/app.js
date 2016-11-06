@@ -48,8 +48,7 @@ angular.module('wbmLesson', ['ionic', 'ngCordova'])
     url: '/quiz',
     views: {
       'tab-watch@tab': {
-        templateUrl: 'templates/quiz.html',
-        controller: 'quizController'
+        template: '<quiz lessonType="watch"></quiz>'
       }
     }
   })
@@ -58,8 +57,7 @@ angular.module('wbmLesson', ['ionic', 'ngCordova'])
     url: '/quiz',
     views: {
       'tab-listen@tab': {
-        templateUrl: 'templates/quiz.html',
-        controller: 'quizController'
+        template: '<quiz lessonType="listen"></quiz>'
       }
     }
   })
@@ -68,8 +66,7 @@ angular.module('wbmLesson', ['ionic', 'ngCordova'])
     url: '/quiz',
     views: {
       'tab-read@tab': {
-        templateUrl: 'templates/quiz.html',
-        controller: 'quizController'
+        template: '<quiz lessonType="read"></quiz>'
       }
     }
   })

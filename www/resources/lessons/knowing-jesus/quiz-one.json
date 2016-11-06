@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "text": "Who did Jesus love?",
+      "answers": [
+        {
+          "text": "Disciples",
+          "chosen": false
+        },
+        {
+          "text": "Followers",
+          "chosen": false
+        },
+        {
+          "text": "Pharisees",
+          "chosen": false
+        },
+        {
+          "text": "Judas",
+          "chosen": false
+        }
+      ]
+    }
+  ]
+}
