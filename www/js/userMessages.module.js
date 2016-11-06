@@ -70,6 +70,20 @@ angular.module('userMessages', [])
                     $scope.doneLoading = true;
                     $scope.messages = data.messages;
 
+                    var questionText = MockService.getQuestion();
+
+                    if (questionText && questionText != '') {
+                        var questionMessage = {
+                            "_id": "535d625f898df4e85e2a125d",
+                            "text": questionText,
+                            "userId": "534b8e5aaa5e7afc1b23e69b",
+                            "date": new Date(),
+                            "read": true,
+                            "readDate": new Date()
+                        };
+                        $scope.messages.push(questionMessage);
+                    }
+
                     $timeout(function() {
                         viewScroll.scrollBottom();
                     }, 0);
@@ -190,6 +204,7 @@ angular.module('userMessages', [])
     .factory('MockService', ['$http', '$q',
         function($http, $q) {
             var me = {};
+            me.question = {};
 
             me.getUserMessages = function(d) {
                 /*
@@ -222,7 +237,15 @@ angular.module('userMessages', [])
                         read: '#/tab/read',
                     }
                 };
-            }
+            };
+
+            me.sendQuestion = function(question) {
+                me.question.text = question;
+            };
+
+            me.getQuestion = function() {
+                return me.question.text;
+            };
 
             return me;
         }
