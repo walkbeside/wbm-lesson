@@ -3,9 +3,13 @@
 
     angular
         .module('wbmLesson')
-        .component('listenLesson', {
-            controller: listenController,
-            templateUrl: '../templates/tabs/tab-listen.html'
+        .directive('listenLesson', function() {
+            return {
+                controller: listenController,
+                controllerAs: '$ctrl',
+                replace: true,
+                templateUrl: '../../templates/tabs/tab-listen.html'
+            };
         });
 
     function listenController($cordovaMedia, $ionicLoading, lessonContentService) {

@@ -3,9 +3,13 @@
 
     angular
         .module('wbmLesson')
-        .component('watchLesson', {
-            controller: watchController,
-            templateUrl: '../templates/tabs/tab-watch.html'
+        .directive('watchLesson', function() {
+            return {
+                controller: watchController,
+                controllerAs: '$ctrl',
+                replace: true,
+                templateUrl: '../../templates/tabs/tab-watch.html'
+            };
         });
 
     function watchController($sce, lessonContentService) {
