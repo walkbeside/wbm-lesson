@@ -53,7 +53,7 @@
                 return baseUrl + lesson + "/" + lessonNumber;
             },
 
-            getLessons: function getLessons() {
+            getAllLessons: function() {
                 return completed.concat(next);
             },
 

@@ -1,16 +1,21 @@
 <ion-view view-title="Lesson Plan">
+    <ion-nav-buttons side="primary">
+        <a class="button" href="#/UserMessages">
+            <i class="icon ion-chatboxes"></i> Back to chat
+        </a>
+    </ion-nav-buttons>
     <ion-content>
         <div class="button-bar">
-            <a class="button">Next</a>
-            <a class="button">Completed</a>
-            <a class="button">All</a>
+            <a class="button" ng-click="getNextLessons()">Next</a>
+            <a class="button" ng-click="getAllLessons()">All</a>
+            <a class="button" ng-click="getCompletedLessons()">Completed</a>
         </div>
         <div class="list">
             <div ng-repeat="lesson in lessons">
-                <a class="item item-icon-left" href="#">
+                <a class="item item-icon-right" href="#">
                     {{lesson.name}}
-                    <i class="ion-ios-circle-filled" ng-if="lesson.completed"></i>
-                    <i class="ion-ios-circle-outline" ng-if="!lesson.completed"></i>
+                    <i class="icon ion-android-checkbox-outline" ng-if="lesson.completed"></i>
+                    <i class="icon ion-android-checkbox-outline-blank" ng-if="!lesson.completed"></i>
                 </a>
             </div>
         </div>

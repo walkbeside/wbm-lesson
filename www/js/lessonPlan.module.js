@@ -7,6 +7,19 @@ angular.module('lessonPlan', [])
                  $ionicActionSheet,
                  $ionicPopup, $ionicScrollDelegate, $timeout, $interval, lessonContentService) {
 
-            $scope.lessons = lessonContentService.getLessons();
+            $scope.lessons = lessonContentService.getAllLessons();
+
+            $scope.getAllLessons = function() {
+                $scope.lessons = lessonContentService.getAllLessons();
+            };
+
+            $scope.getCompletedLessons = function() {
+                $scope.lessons = lessonContentService.getCompletedLessons();
+            };
+
+            $scope.getNextLessons = function() {
+                $scope.lessons = lessonContentService.getNextLessons();
+            };
         }
+
     ]);
