@@ -23,7 +23,7 @@
 
         function loadQuizQuestion() {
             lessonContentService.getTextContent('knowing-jesus/quiz-one.json')
-                .success(function(data) {
+                .then(function(data) {
                     vm.questions = data.questions;
                 });
         }

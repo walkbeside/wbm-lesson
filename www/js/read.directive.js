@@ -19,7 +19,7 @@
 
         function loadTextContent() {
             lessonContentService.getTextContent('knowing-jesus/lesson-one.html')
-                .success(function(data) {
+                .then(function(data) {
                     vm.lessonText = data;
                 });
         }
