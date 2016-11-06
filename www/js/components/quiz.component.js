@@ -4,7 +4,7 @@
     angular
         .module('wbmLesson')
         .component('quiz', {
-            controller: readController,
+            controller: quizController,
             bindings: {
                 // watch/read/listen
                 'lessonType': '<'
@@ -12,7 +12,7 @@
             templateUrl: '../../templates/quiz.html'
         });
 
-    function readController(lessonContentService) {
+    function quizController(lessonContentService) {
         loadQuizQuestion();
         var vm = this;
 
