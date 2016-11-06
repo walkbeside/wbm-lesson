@@ -34,6 +34,12 @@ angular.module('wbmLesson', ['ionic', 'ngCordova', 'userMessages'])
     controller: 'UserMessagesCtrl'
   })
 
+  .state('LessonPlan', {
+    url: '/LessonPlan',
+    templateUrl: 'templates/LessonPlan.html',
+    controller: 'lessonPlanController'
+  })
+
   // setup an abstract state for the tabs directive
   .state('tab', {
     url: '/tab',
@@ -97,6 +103,6 @@ angular.module('wbmLesson', ['ionic', 'ngCordova', 'userMessages'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/UserMessages');
+  $urlRouterProvider.otherwise('/LessonPlan');
 
 });

@@ -1,0 +1,27 @@
+<ion-view view-title="Lesson Plan">
+    <ion-content>
+        <div class="button-bar">
+            <a class="button">Next</a>
+            <a class="button">Completed</a>
+            <a class="button">All</a>
+        </div>
+        <div>
+            <form name="quiz" ng-controller="lessonPlanController">
+                <label>Introduction:
+                    <input type="checkbox" ng-model="checkboxModel.value1">
+                </label>
+                <br/>
+                <label>Vision casting:
+                    <input type="checkbox" ng-model="checkboxModel.value2">
+                </label>
+                <br/>
+                <label>Treasuring Christ:
+                    <input type="checkbox" ng-model="checkboxModel.value3">
+                </label>
+                <br/>
+            </form>
+            </p>
+        </div>
+
+    </ion-content>
+</ion-view>
