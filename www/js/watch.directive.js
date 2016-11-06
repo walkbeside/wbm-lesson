@@ -12,12 +12,16 @@
             };
         });
 
-    function watchController($sce, lessonContentService) {
+    function watchController($sce, $ionicSideMenuDelegate, lessonContentService) {
         var vm = this;
         loadVideoUrl();
 
         function loadVideoUrl() {
             vm.videoUrl = $sce.trustAsResourceUrl(lessonContentService.getVideoUrl('lesson1'));
+        }
+
+        vm.toggleLeft = function() {
+            $ionicSideMenuDelegate.toggleLeft();
         }
     }
 })();

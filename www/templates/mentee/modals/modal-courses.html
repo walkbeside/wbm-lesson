@@ -1,0 +1,14 @@
+<div class="modal">
+    <ion-header-bar>
+        <h1 class="title">Courses</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div ng-repeat="lesson in lessons">
+            <a class="item item-icon-right" href="#">
+                {{lesson.name}}
+                <i class="icon ion-android-checkbox-outline" ng-if="lesson.completed"></i>
+                <i class="icon ion-android-checkbox-outline-blank" ng-if="!lesson.completed"></i>
+            </a>
+        </div>
+    </ion-content>
+</div>
