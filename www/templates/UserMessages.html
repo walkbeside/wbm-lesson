@@ -51,25 +51,25 @@
 
                     <div class="message" ng-bind-html="message.text | nl2br" autolinker>
                     </div>
-
+                    <div ng-if="message.link">
+                        <a href="{{message.link.watch}}">
+                            Watch
+                        </a>
+                        <br/>
+                        <a href="{{message.link.listen}}">
+                            Listen
+                        </a>
+                        <br/>
+                        <a href="{{message.link.read}}">
+                            Read
+                        </a>
+                        <br/>
+                    </div>
                     <div class="message-detail">
                               <span ng-click="viewProfile(message)"
-                                    class="bold">{{toUser.username}}</span>,
+                                    class="bold">{{toUser.username}}</span>, {{message.date}}
                         <span am-time-ago="message.date"></span>
-                        <div ng-if="message.link">
-                            <a href="{{message.link.watch}}">
-                                Watch
-                            </a>
-                            <br/>
-                            <a href="{{message.link.listen}}">
-                                Listen
-                            </a>
-                            <br/>
-                            <a href="{{message.link.read}}">
-                                Read
-                            </a>
-                            <br/>
-                        </div>
+
                     </div>
 
                 </div>
@@ -87,7 +87,7 @@
 
                     <div class="message-detail">
                               <span ng-click="viewProfile(message)"
-                                    class="bold">{{user.username}}</span>,
+                                    class="bold">{{user.username}}</span>, {{message.date}}
                         <span am-time-ago="message.date"></span>
                     </div>
                 </div>
