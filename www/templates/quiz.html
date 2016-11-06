@@ -17,7 +17,7 @@
                 </div>
             <div ng-if="question.type == 'radio'">
                 <div ng-repeat="answer in question.answers">
-                    <ion-radio ng-model="$answer.chosen">{{answer.text}}</ion-radio>
+                    <ion-radio ng-model="$answer.chosen" ng-value="$answer.text">{{answer.text}}</ion-radio>
                 </div>
             </div>
             </form>
