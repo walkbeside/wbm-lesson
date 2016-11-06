@@ -5,7 +5,7 @@
         .module('wbmLesson')
         .component('readLesson', {
             controller: readController,
-            templateUrl: '../templates/tabs/tab-read.html'
+            templateUrl: '../../templates/tabs/tab-read.html'
         });
 
     function readController(lessonContentService) {

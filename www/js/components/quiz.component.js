@@ -9,7 +9,7 @@
                 // watch/read/listen
                 'lessonType': '<'
             },
-            templateUrl: '../templates/quiz.html'
+            templateUrl: '../../templates/quiz.html'
         });
 
     function readController(lessonContentService) {

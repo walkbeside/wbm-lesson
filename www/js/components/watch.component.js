@@ -5,7 +5,7 @@
         .module('wbmLesson')
         .component('watchLesson', {
             controller: watchController,
-            templateUrl: '../templates/tabs/tab-watch.html'
+            templateUrl: '../../templates/tabs/tab-watch.html'
         });
 
     function watchController($sce, lessonContentService) {
