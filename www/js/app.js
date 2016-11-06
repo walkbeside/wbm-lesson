@@ -100,6 +100,11 @@ angular.module('wbmLesson', ['ionic', 'ngCordova', 'userMessages', 'lessonPlan']
         template: '<read-lesson></read-lesson>'
       }
     }
+  })
+
+  .state('mentee', {
+    url: '/mentee/dashboard',
+    templateUrl: 'templates/mentee/dashboard.html'
   });
 
   // if none of the above states are matched, use this as the fallback
