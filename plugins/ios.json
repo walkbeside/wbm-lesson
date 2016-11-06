@@ -27,6 +27,9 @@
         },
         "cordova-plugin-media": {
             "PACKAGE_NAME": "com.ionicframework.myapp198770"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.myapp198770"
         }
     },
     "dependent_plugins": {
