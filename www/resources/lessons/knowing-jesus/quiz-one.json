@@ -23,23 +23,23 @@
       ]
     },
     {
-      "text": "Who did Jesus love?",
+      "text": "How many disciples did Jesus have?",
       "type": "radio",
       "answers": [
         {
-          "text": "Disciples",
+          "text": "One",
           "chosen": false
         },
         {
-          "text": "Followers",
+          "text": "Twelve",
           "chosen": false
         },
         {
-          "text": "Pharisees",
+          "text": "Five",
           "chosen": false
         },
         {
-          "text": "Judas",
+          "text": "Eight",
           "chosen": false
         }
       ]
