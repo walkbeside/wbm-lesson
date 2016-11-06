@@ -5,23 +5,14 @@
             <a class="button">Completed</a>
             <a class="button">All</a>
         </div>
-        <div>
-            <form name="quiz" ng-controller="lessonPlanController">
-                <label>Introduction:
-                    <input type="checkbox" ng-model="checkboxModel.value1">
-                </label>
-                <br/>
-                <label>Vision casting:
-                    <input type="checkbox" ng-model="checkboxModel.value2">
-                </label>
-                <br/>
-                <label>Treasuring Christ:
-                    <input type="checkbox" ng-model="checkboxModel.value3">
-                </label>
-                <br/>
-            </form>
-            </p>
+        <div class="list">
+            <div ng-repeat="lesson in lessons">
+                <a class="item item-icon-left" href="#">
+                    {{lesson.name}}
+                    <i class="ion-ios-circle-filled" ng-if="lesson.completed"></i>
+                    <i class="ion-ios-circle-outline" ng-if="!lesson.completed"></i>
+                </a>
+            </div>
         </div>
-
     </ion-content>
 </ion-view>

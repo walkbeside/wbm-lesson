@@ -8,6 +8,32 @@
     function lessonContentService($http) {
         var baseUrl = 'resources/lessons/';
 
+        var completed = [
+            {
+                name: 'Stepping From Uncertainty to Confidence',
+                completed: true
+            },
+            {
+                name: 'Stepping From Feelings of Unworthiness to Forgiveness',
+                completed: true
+            },
+            {
+                name: 'Stepping From Being Unable to Empowered',
+                completed: true
+            }
+        ];
+
+        var next = [
+            {
+                name: 'Stepping From Being Unprepared to Equipped',
+                completed: false
+            },
+            {
+                name: 'Stepping From Being Undeveloped to Maturity',
+                completed: false
+            }
+        ];
+
         return {
             getTextContent: function(lessonUrl) {
                 return $http.get(baseUrl + lessonUrl);
@@ -25,7 +51,22 @@
 
             getAudioUrl: function(lesson, lessonNumber) {
                 return baseUrl + lesson + "/" + lessonNumber;
+            },
+
+            getLessons: function getLessons() {
+                return completed.concat(next);
+            },
+
+            getCompletedLessons: function() {
+                return completed;
+            },
+
+            getNextLessons: function() {
+                return next;
             }
         };
     }
+
+
+
 })();
