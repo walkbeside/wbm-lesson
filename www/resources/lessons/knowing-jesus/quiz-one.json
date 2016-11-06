@@ -2,6 +2,29 @@
   "questions": [
     {
       "text": "Who did Jesus love?",
+      "type": "checkbox",
+      "answers": [
+        {
+          "text": "Disciples",
+          "chosen": false
+        },
+        {
+          "text": "Followers",
+          "chosen": false
+        },
+        {
+          "text": "Pharisees",
+          "chosen": false
+        },
+        {
+          "text": "Judas",
+          "chosen": false
+        }
+      ]
+    },
+    {
+      "text": "Who did Jesus love?",
+      "type": "radio",
       "answers": [
         {
           "text": "Disciples",
