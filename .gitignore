@@ -3,3 +3,4 @@ platforms/*
 res/*
 node_modules/*
 plugins/*
+resources/ios/icon
