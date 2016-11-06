@@ -2,10 +2,6 @@
     <ion-content>
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <div ng-repeat="question in $ctrl.questions">
             <p>
                 Question #{{$index + 1}}
@@ -14,9 +10,16 @@
                 {{question.text}}
             <p>
             <form name="quiz">
-                <div ng-repeat="answer in question.answers">
-                    <ion-checkbox ng-model="$answer.chosen">{{answer.text}}</ion-checkbox>
+                <div ng-if="question.type == 'checkbox'">
+                    <div ng-repeat="answer in question.answers">
+                        <ion-checkbox ng-model="$answer.chosen">{{answer.text}}</ion-checkbox>
+                    </div>
                 </div>
+            <div ng-if="question.type == 'radio'">
+                <div ng-repeat="answer in question.answers">
+                    <ion-radio ng-model="$answer.chosen" ng-value="$answer.text">{{answer.text}}</ion-radio>
+                </div>
+            </div>
             </form>
             </p>
         </div>

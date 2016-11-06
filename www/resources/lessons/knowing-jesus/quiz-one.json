@@ -2,6 +2,7 @@
   "questions": [
     {
       "text": "Who did Jesus love?",
+      "type": "checkbox",
       "answers": [
         {
           "text": "Disciples",
@@ -17,6 +18,28 @@
         },
         {
           "text": "Judas",
+          "chosen": false
+        }
+      ]
+    },
+    {
+      "text": "How many disciples did Jesus have?",
+      "type": "radio",
+      "answers": [
+        {
+          "text": "One",
+          "chosen": false
+        },
+        {
+          "text": "Twelve",
+          "chosen": false
+        },
+        {
+          "text": "Five",
+          "chosen": false
+        },
+        {
+          "text": "Eight",
           "chosen": false
         }
       ]
