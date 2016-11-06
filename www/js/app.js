@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('wbmLesson', ['ionic', 'ngCordova', 'userMessages', 'lessonPlan', 'courses',
-  'mentees'])
+  'mentees', 'stats', 'invite', 'favorites'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -41,16 +41,57 @@ angular.module('wbmLesson', ['ionic', 'ngCordova', 'userMessages', 'lessonPlan',
     controller: 'lessonPlanController'
   })
 
-      .state('courses', {
-        url: '/courses',
-        templateUrl: 'templates/courses.html',
-        controller: 'coursesController'
-      })
-
       .state('mentees', {
         url: '/mentees',
         templateUrl: 'templates/mentees.html',
         controller: 'menteesController'
+      })
+
+
+      .state('mentor', {
+        url: '/mentor',
+        abstract: true,
+        templateUrl: 'templates/mentor.html'
+      })
+
+      .state('mentor.courses', {
+        url: '/courses',
+        views: {
+          'mentor-courses': {
+            templateUrl: 'templates/courses.html',
+            controller: 'coursesController'
+          }
+        }
+      })
+
+      .state('mentor.favorites', {
+        url: '/favorites',
+        views: {
+          'mentor-favorites': {
+            templateUrl: 'templates/favorites.html',
+            controller: 'favoritesController'
+          }
+        }
+      })
+
+      .state('mentor.stats', {
+        url: '/stats',
+        views: {
+          'mentor-stats': {
+            templateUrl: 'templates/stats.html',
+            controller: 'statsController'
+          }
+        }
+      })
+
+      .state('mentor.invite', {
+        url: '/invite',
+        views: {
+          'mentor-invite': {
+            templateUrl: 'templates/invite.html',
+            controller: 'inviteController'
+          }
+        }
       })
 
   // setup an abstract state for the tabs directive
